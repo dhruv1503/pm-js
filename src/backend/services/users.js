@@ -1,8 +1,8 @@
-import { ALL_USERS } from "../server/constants";
+import { ALL_USERS } from "../helpers/constants";
 import {
   getItemsFromLocalStorage,
   setObjectIntoLocalStorage,
-} from "../server/helpers/localstorage";
+} from "../helpers/localstorage";
 
 const getUsers = () => {
   return new Promise((resolve, reject) => {
