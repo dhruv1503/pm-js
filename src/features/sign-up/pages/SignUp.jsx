@@ -175,7 +175,7 @@ const navigate = useNavigate();
               Create your account
             </h1>
             <p className="text-md text-slate-400">
-              to continue to Life Tracker
+              to continue to Task Flo
             </p>
           </div>
           <form>
