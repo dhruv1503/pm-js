@@ -12,6 +12,7 @@ import { AuthContextProvider } from './context/AuthContext.jsx'
 const router = createBrowserRouter([
   {
 path: "/",
+element : <SignUp/>,
 children : [
   {
     path: "sign-up",
