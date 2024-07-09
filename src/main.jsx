@@ -7,6 +7,7 @@ import { Toaster } from 'react-hot-toast'
 import { SignIn } from './features/sign-in/pages/SignIn.jsx'
 import { Provider } from 'react-redux'
 import { store } from './store/index.js'
+import { AuthContextProvider } from './context/AuthContext.jsx'
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,7 @@ children : [
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <AuthContextProvider>
     <Provider store={store}>
     <RouterProvider router={router}/>
     <Toaster
@@ -47,6 +49,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     }}
     />
   </Provider>
+  </AuthContextProvider>
   </React.StrictMode>
   ,
 )

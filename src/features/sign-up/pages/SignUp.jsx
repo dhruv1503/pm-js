@@ -5,6 +5,7 @@ import { useState } from "react";
 import { EMAIL_REGEX } from "../../../constants/regex";
 import toast from "react-hot-toast";
 import { signup } from "../../../backend/services/signup";
+// import { SHA256 } from "crypto-js";
 
 
 
@@ -147,6 +148,7 @@ const navigate = useNavigate();
 
   const registerUser = async (userDetails) => {
     try {
+      
       const data = await signup(userDetails);
       return data;
     } catch (error) {
