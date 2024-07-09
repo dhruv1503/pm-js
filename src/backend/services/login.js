@@ -1,3 +1,4 @@
+import { SHA256 } from "crypto-js";
 import { ALL_USERS } from "../helpers/constants";
 import { getItemsFromLocalStorage } from "../helpers/localstorage";
 
@@ -10,11 +11,14 @@ const login = (loginCredentials) => {
            return  reject("No users exist");
         }
          const userById = users.find((user) => user.email === loginCredentials.email);
+         console.log(userById.password);
+         console.log(loginCredentials.password)
+
          if(!userById){
             return reject({message: "User with email id not found"})
          }
 
-         if(userById.password !== loginCredentials.password){
+         if(userById.password !== SHA256(loginCredentials.password).toString()){
             return reject({message: "Wrong password entered"})
          }
 

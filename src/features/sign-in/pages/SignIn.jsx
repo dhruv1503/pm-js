@@ -149,7 +149,7 @@ catch(error){
             <h1 className="text-2xl font-bold text-gray-900">Sign In</h1>
             <p className="text-md text-slate-400">
               {" "}
-              to continue to Life Tracker
+              to continue to Task Flo
             </p>
           </div>
           <form>
@@ -200,3 +200,6 @@ catch(error){
     </div>
   );
 };
+
+
+
