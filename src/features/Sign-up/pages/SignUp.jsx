@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Input } from "../../../components/sharedComponents/Input";
 import { Navbar } from "../../../components/sharedComponents/Navbar";
 import { useState } from "react";
@@ -33,6 +33,8 @@ export const SignUp = () => {
 //     (state: { usersDatabase: any; user: any; project }) =>
 //       state.usersDatabase
 //   );
+
+const navigate = useNavigate();
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -134,6 +136,8 @@ export const SignUp = () => {
       const data  = await registerUser(form);
       toast.success(data)
       resetRegistrationForm(e);
+      navigate("/sign-in")
+      
     } catch (error ) {
       toast.error(error)
     }
@@ -235,7 +239,7 @@ export const SignUp = () => {
               </div>
               <p>
                 Already registered?{" "}
-                <Link className="underline hover:no-underline" to="/login">
+                <Link className="underline hover:no-underline" to="/sign-in">
                   Click here to Login
                 </Link>
               </p>
