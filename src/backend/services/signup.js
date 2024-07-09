@@ -1,6 +1,6 @@
-import { ALL_USERS } from "../server/constants";
+import { ALL_USERS } from "../helpers/constants";
 import { v4 as uuid } from "uuid";
-import { getItemsFromLocalStorage, setObjectIntoLocalStorage } from "../server/helpers/localstorage";
+import { getItemsFromLocalStorage, setObjectIntoLocalStorage } from "../helpers/localstorage";
 
 const signup = (user) => {
     return new Promise((resolve, reject) => {
