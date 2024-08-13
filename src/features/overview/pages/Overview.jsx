@@ -94,7 +94,7 @@ export const Overview = () => {
               projects.map((project) => (
                 <CategoryTile
                   key={project.name}
-                  name={project.name.split("_").join(" ")}
+                 name={project.name.split("_").join(" ").length > 10 ? `${project.name.split("_").join(" ").slice(0, 10)} ...` : project.name.split("_").join(" ")}
                   url={`/project/${project.name}`}
                 />
               ))
